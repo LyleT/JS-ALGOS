@@ -10,7 +10,10 @@ The input array's length > 1 */
 
 const averageLength = (arr) => {
   
-    let avg = Math.round(arr.reduce((a,c) => a + Number(c.length),0) / arr.length);
+    const avg = Math.round(arr.reduce((a,c) => a + Number(c.length),0) / arr.length);
+
+    // alternate way to find the avg
+    // const avg = Math.round(arr.join('').length / arr.length)
 
     return arr.map( e => e[0].repeat(avg));
 
